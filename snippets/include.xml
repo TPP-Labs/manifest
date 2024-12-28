@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+
+  <remote name="aospb"
+          fetch="https://github.com/aospb-staging"
+          revision="15.1"  />
+  
+  <remote name="gitea"
+          fetch="https://gitea.com/" />
+
+  <remote  name="pixelage"
+           fetch="https://github.com/ProjectPixelage"
+           revision="refs/heads/15" />
+
+  <!-- General Repos -->
+  <project path="bootable/recovery" name="bootable_recovery" remote="aospb" />
+  <project path="bootable/deprecated-ota" name="bootable_deprecated-ota" remote="aospb" />
+  <project path="device/lineage/sepolicy" name="device_lineage_sepolicy" remote="aospb" />
+  <project path="manifest" name="manifest" remote="aospb" />
+  <project path="bionic" name="bionic" remote="aospb" />
+
+  <!-- Build Repos -->
+  <project path="build/make" name="build_make" groups="pdk" remote="aospb" >
+    <copyfile src="core/root.mk" dest="Makefile" />
+    <linkfile src="CleanSpec.mk" dest="build/CleanSpec.mk" />
+    <linkfile src="buildspec.mk.default" dest="build/buildspec.mk.default" />
+    <linkfile src="core" dest="build/core" />
+    <linkfile src="envsetup.sh" dest="build/envsetup.sh" />
+    <linkfile src="target" dest="build/target" />
+    <linkfile src="tools" dest="build/tools" />
+  </project>
+
+  <project path="build/release" name="build_release" groups="pdk,tradefed" remote="aospb" />
+  <project path="build/soong" name="build_soong" groups="pdk,tradefed" remote="aospb" >
+    <linkfile src="root.bp" dest="Android.bp" />
+    <linkfile src="bootstrap.bash" dest="bootstrap.bash" />
+  </project>
+
+  <!-- External Repos -->
+  <project path="external/wpa_supplicant_8" name="external_wpa_supplicant_8" remote="aospb" />
+
+  <!-- Frameworks Repos -->
+  <project path="frameworks/av" name="frameworks_av" remote="aospb" />
+  <project path="frameworks/base" name="frameworks_base" remote="aospb" />
+  <project path="frameworks/native" name="frameworks_native" remote="aospb" />
+
+  <!-- Packages Repos -->
+  <project path="packages/apps/Settings" name="packages_apps_Settings" remote="aospb" />
+  <project path="packages/apps/ParanoidSense" name="android_packages_apps_ParanoidSense" remote="pixelage" />
+  <project path="packages/modules/Bluetooth" name="packages_modules_Bluetooth" groups="pdk-cw-fs,pdk-fs" remote="aospb" />
+  <project path="packages/modules/Connectivity" name="packages_modules_Connectivity" groups="pdk-cw-fs,pdk-fs" remote="aospb" />
+
+  <!-- Vendor Repos -->
+  <project path="vendor/aosp" name="vendor_aosp" remote="aospb" />
+  <project path="vendor/custom-preference" name="vendor_custom-preference" remote="aospb" />
+  <project path="vendor/gms" name="clarencelol/android_vendor_gms" remote="gitea" revision="15" clone-depth="1" />
+
+  <!-- System Repos -->
+  <project path="system/core" name="system_core" remote="aospb" />
+  <project path="system/security" name="system_security" remote="aospb" />
+  <project path="system/sepolicy" name="system_sepolicy" remote="aospb" />
+  <project path="system/extras" name="system_extras" remote="aospb" />
+
+</manifest>
