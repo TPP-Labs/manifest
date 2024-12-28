@@ -15,7 +15,6 @@
   <!-- General Repos -->
   <project path="bootable/recovery" name="bootable_recovery" remote="aospb" />
   <project path="bootable/deprecated-ota" name="bootable_deprecated-ota" remote="aospb" />
-  <project path="device/lineage/sepolicy" name="device_lineage_sepolicy" remote="aospb" />
   <project path="manifest" name="manifest" remote="aospb" />
   <project path="bionic" name="bionic" remote="aospb" />
 
