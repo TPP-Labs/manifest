@@ -193,4 +193,7 @@
   <project path="hardware/qcom-caf/vr" name="android_hardware_qcom_vr" groups="qcom,sdm660" remote="lineage" />
   <project path="hardware/qcom-caf/wlan" name="android_hardware_qcom_wlan" groups="qcom,lanai-vendor" revision="lineage-22.0-caf" remote="lineage" />
 
+  <!-- Kernel -->
+  <project path="kernel/configs" name="android_kernel_configs" groups="vts,pdk" remote="lineage" />
+
 </manifest>

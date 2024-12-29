@@ -108,4 +108,6 @@
   <remove-project name="platform/system/sepolicy" />
   <remove-project name="platform/system/update_engine" />
   <remove-project name="platform/system/vold" />
+
+  <remove-project name="kernel/configs" />
 </manifest>
