@@ -1415,5 +1415,6 @@
   <include name="snippets/remove.xml" />
   <include name="snippets/include.xml" />
   <include name="snippets/lineage.xml" />
+  <include name="snippets/external.xml" />
 
 </manifest>

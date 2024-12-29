@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+
+    <remote name="github"
+          fetch="https://github.com/" />
+        
+    <remote name="gitea"
+          fetch="https://gitea.com/" />
+
+  <!-- General Repos -->
+  <project path="bootable/deprecated-ota" name="c0smic-Lab/bootable_deprecated-ota" revision="15" remote="github" />
+  <project path="build/release" name="c0smic-Lab/build_release" groups="pdk,tradefed" revision="15" remote="github" />
+
+  <!-- External Repos -->
+  <project path="external/wpa_supplicant_8" name="c0smic-Lab/external_wpa_supplicant_8" revision="15" remote="github" />
+
+  <!-- Frameworks Repos -->
+  <project path="frameworks/av" name="c0smic-Lab/frameworks_av" revision="15" remote="github" />
+  <project path="frameworks/native" name="c0smic-Lab/frameworks_native" revision="15" remote="github" />
+
+  <!-- Packages Repos -->
+  <project path="packages/apps/ParanoidSense" name="ProjectPixelage/android_packages_apps_ParanoidSense" revision="15" remote="github" />
+  <project path="packages/modules/Bluetooth" name="c0smic-Lab/packages_modules_Bluetooth" groups="pdk-cw-fs,pdk-fs" revision="15" remote="github" />
+  <project path="packages/modules/Connectivity" name="ProjectPixelage/android_packages_modules_Connectivity" groups="pdk-cw-fs,pdk-fs" revision="15" remote="github" />
+
+  <!-- Vendor Repos -->
+  <project path="vendor/custom-preference" name="c0smic-Lab/vendor_custom-preference" revision="15" remote="github" />
+  <project path="vendor/gms" name="clarencelol/android_vendor_gms" remote="gitea" revision="15" clone-depth="1" />
+
+  <!-- System Repos -->
+  <project path="system/security" name="c0smic-Lab/system_security" revision="15" remote="github" />
+  <project path="system/extras" name="c0smic-Lab/system_extras" revision="15" remote="github" />
+
+</manifest>
