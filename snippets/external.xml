@@ -21,7 +21,6 @@
   <project path="packages/modules/Connectivity" name="ProjectPixelage/android_packages_modules_Connectivity" groups="pdk-cw-fs,pdk-fs" revision="15" remote="github" />
 
   <!-- Vendor Repos -->
-  <project path="vendor/custom-preference" name="c0smic-Lab/vendor_custom-preference" revision="15" remote="github" />
   <project path="vendor/gms" name="clarencelol/android_vendor_gms" remote="gitea" revision="15" clone-depth="1" />
 
   <!-- System Repos -->
