@@ -54,6 +54,7 @@
   <project path="external/mksh" name="android_external_mksh" remote="lineage" />
   <project path="external/e2fsprogs" name="android_external_e2fsprogs" remote="lineage" />
   <project path="external/tinycompress" name="android_external_tinycompress" remote="lineage" />
+  <project path="external/wpa_supplicant_8" name="android_external_wpa_supplicant_8" remote="lineage" />
   <project path="external/zstd" name="android_external_zstd" groups="pdk" remote="lineage" />
 
   <!-- Hardware repos -->
