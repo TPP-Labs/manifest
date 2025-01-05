@@ -122,6 +122,7 @@
   <!-- System -->
   <project path="system/bpf" name="android_system_bpf" remote="lineage" />
   <project path="system/libhidl" name="android_system_libhidl" remote="lineage" />
+  <project path="system/logging" name="android_system_logging" groups="pdk" remote="lineage" />
   <project path="system/update_engine" name="android_system_update_engine" remote="lineage" />
   <project path="system/vold" name="android_system_vold" remote="lineage" />
   <project path="system/libziparchive" name="android_system_libziparchive" remote="lineage" />
