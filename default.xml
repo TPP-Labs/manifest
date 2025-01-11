@@ -6,7 +6,7 @@
            review="https://android-review.googlesource.com/" />
   <default revision="refs/tags/android-15.0.0_r10"
            remote="aosp"
-           sync-j="4" />
+           sync-j="8" />
 
   <superproject name="platform/superproject" remote="aosp" revision="android-15.0.0_r10"/>
   <contactinfo bugurl="go/repo-bug" />
