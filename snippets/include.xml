@@ -36,6 +36,7 @@
   <!-- Vendor Repos -->
   <project path="vendor/aosp" name="vendor_aosp" remote="aospb" />
   <project path="vendor/custom-preference" name="vendor_custom-preference" remote="aospb" />
+  <project path="vendor/products" name="vendor_products" remote="aospb" />
 
   <!-- System Repos -->
   <project path="system/core" name="system_core" remote="aospb" />
