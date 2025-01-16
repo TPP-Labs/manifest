@@ -1,59 +1,49 @@
-AOSPB
-===========
+<div align="center">
 
-Getting started
----------------
+<img src="https://github.com/The-Pixel-Project/tpp_files/blob/main/TPPGithub.png?raw=true" >
 
-To get started with Android/aospb, you'll need to get familiar with [Source Control Tools](https://source.android.com/setup/develop).
+</div>
 
-### Spinning up the environment
---------------
+A glimpse of the project
+------------
+The Pixel Project, an AOSP based custom rom lead by a passionate team aiming to provide a clean and smooth experience of stock android with Pixel Goodies.
+
+Requirements
+------------
+- At least 250-300 GB free disk space.
+- A computer/server with at least 16GB RAM running Linux and a fast & stable internet connection.
+- Some basic knowledge of Linux commands, device tree management and git.
+
+Instructions
+------------
+### Prerequisites
+A properly configured build environment is required to build AOSP custom roms. A comprehensive guide for setting up the build environment can be found [here](https://source.android.com/setup/build/initializing).
+
+Sync up the source
+------------
 ```bash
-bash <(curl -sL https://raw.githubusercontent.com/akhilnarang/scripts/refs/heads/master/setup/android_build_env.sh)
+repo init -u https://github.com/TPP-Labs/manifest.git -b 15.1 -g default,-mips,-darwin,-notdefault --git-lfs
+
+repo sync -c --force-sync --optimized-fetch --no-tags --no-clone-bundle --prune -j$(nproc --all)
 ```
 
-Start Syncing
----------------
-To start syncing, create a directory and move in that directoery with the command below.
+Build
+------------
+### Set up environment
 ```
-mkdir aospb && cd aospb
+. build/envsetup.sh
 ```
-
-To initialize your local repository using the aospb trees, use a command like this:
+### Choose a target
 ```
-repo init -u https://github.com/aospb-staging/manifest.git -b 15.1 --git-lfs
+lunch aosp_$device-userdebug
 ```
-Then to sync up:
+### Build the code
 ```
-repo sync
+make bacon -j$(nproc --all)
 ```
-Start Building
----------------
-To start the building process, setup the environment by executing the below command.
-```
-source build/envsetup.sh
-```
-Use the below command to perform lunch action, replace *$device_codename* as required for your device. 
-
-```
-breakfast $device_codename
-```
-
-To start the build:
-```
-brunch $device_codename
-```
-**Note**: By default `user` build is set.
 
 ### Credits
 --------------
  * [**AOSP**](https://android.googlesource.com)
  * [**LineageOS**](https://github.com/LineageOS)
- * [**AOSPA**](https://github.com/AOSPA)
- * [**HentaiOS**](https://github.com/hentaios)
- * [**Project Radiant**](https://github.com/ProjectRadiant)
- * [**PixelOS-AOSP**](https://github.com/PixelOS-AOSP)
- * [**StatixOS**](https://github.com/StatiXOS)
- * [**Project Pixelage**](https://github.com/ProjectPixelage)
- * [**cAOSP**](https://github.com/c0smic-Lab)
- * ... And the list never ends.
+ 

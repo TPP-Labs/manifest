@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+
+  <remote name="tpp"
+          fetch="https://github.com/TPP-Labs"
+          revision="15.1"  />
+
+  <!-- General Repos -->
+  <project path="bootable/recovery" name="bootable_recovery" remote="tpp" />
+  <project path="manifest" name="manifest" remote="tpp" />
+  <project path="bionic" name="bionic" remote="tpp" />
+
+  <!-- Build Repos -->
+  <project path="build/make" name="build_make" groups="pdk" remote="tpp" >
+    <copyfile src="core/root.mk" dest="Makefile" />
+    <linkfile src="CleanSpec.mk" dest="build/CleanSpec.mk" />
+    <linkfile src="buildspec.mk.default" dest="build/buildspec.mk.default" />
+    <linkfile src="core" dest="build/core" />
+    <linkfile src="envsetup.sh" dest="build/envsetup.sh" />
+    <linkfile src="target" dest="build/target" />
+    <linkfile src="tools" dest="build/tools" />
+  </project>
+
+  <project path="build/soong" name="build_soong" groups="pdk,tradefed" remote="tpp" >
+    <linkfile src="root.bp" dest="Android.bp" />
+    <linkfile src="bootstrap.bash" dest="bootstrap.bash" />
+  </project>
+
+  <!-- Frameworks Repos -->
+  <project path="frameworks/base" name="frameworks_base" remote="tpp" />
+
+  <!-- Packages Repos -->
+  <project path="packages/apps/Settings" name="packages_apps_Settings" remote="tpp" />
+  <project path="packages/apps/Updater" name="packages_apps_Updater" remote="tpp" />
+
+  <!-- Vendor Repos -->
+  <project path="vendor/aosp" name="vendor_aosp" remote="tpp" />
+  <project path="vendor/custom-preference" name="vendor_custom-preference" remote="tpp" />
+ 
+  <!-- System Repos -->
+  <project path="system/core" name="system_core" remote="tpp" />
+  <project path="system/sepolicy" name="system_sepolicy" remote="tpp" />
+
+</manifest>
